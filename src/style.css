@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share:wght@400;700&display=swap');
+
+body {
+  background: #0c1c3e url(./img/container_bg.png);
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #fff url(./img/purple-background.jpg);
+  color: #fff;
+  display: flex;
+  height: 15vh;
+  text-shadow: 1px 1px 2px rgb(0 0 0 / 40%);
+}
+
+header img {
+  margin: 10px;
+  height: 80%;
+}
+
+.navbar {
+  background: #fff url(./img/container_bg.png);
+  display: flex;
+}
+
+.container {
+  background: #fff url(./img/container_bg.png);
+  justify-content: center;
+  margin: auto;
+  min-height: 100vh;
+  width: 85%;
+}
+
+.container ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-transform: capitalize;
+  font-family: 'Share', cursive;
+}
+
+.container li {
+  margin: 20px;
+  width: 20%;
+}
+
+.container figure {
+  background: #F2F2F2;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0.5em;
+  text-align: center;
+  width: 100%;
+}
+
+.container p {
+  color: #919191;
+  margin: 2px 0;
+}
+
+.container h5 {
+  font-size: 145%;
+  margin: 0 0 10px 0;
+}
