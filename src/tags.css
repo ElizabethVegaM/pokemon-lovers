@@ -1,0 +1,79 @@
+/* Color tags */
+
+.bug-tag {
+  background-color: #729f3f;
+}
+
+.electric-tag {
+  background-color: #eed535;
+  color: #212121;
+}
+
+.fairy-tag {
+  background-color: #fdb9e9;
+  color: #212121;
+}
+
+.fighting-tag {
+  background-color: #d56723;
+}
+
+.fire-tag {
+  background-color: #fd7d24;
+}
+
+.flying-tag {
+  background-color: #3dc7ef;
+}
+
+.ghost-tag {
+  background-color: #7b62a3;
+}
+
+.grass-tag {
+  background-color: #9bcc50;
+  color: #212121;
+}
+
+.ground-tag {
+  background-color: #ab9842;
+  color: #212121;
+}
+
+.ice-tag {
+  background-color: #51c4e7;
+  color: #212121;
+}
+
+.normal-tag {
+  background-color: #a4acaf;
+  color: #212121;
+}
+
+.poison-tag {
+  background-color: #b97fc9;
+}
+
+.psychic-tag {
+  background-color: #f366b9;
+}
+
+.rock-tag {
+  background-color: #a38c21;
+}
+
+.steel-tag {
+  background-color: #9eb7b8;
+  color: #212121;
+}
+
+.water-tag {
+  background-color: #9bcc50;
+}
+
+
+
+
+
+
+

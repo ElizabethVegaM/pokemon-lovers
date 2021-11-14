@@ -31,7 +31,7 @@ header img {
   justify-content: center;
   margin: auto;
   min-height: 100vh;
-  width: 85%;
+  width: 80%;
 }
 
 .container ul {
@@ -44,7 +44,13 @@ header img {
 
 .container li {
   margin: 20px;
-  width: 20%;
+  width: 15%;
+  transition: transform 150ms;
+  cursor: pointer;
+}
+
+.container li:hover {
+  transform: translateY(-10px);
 }
 
 .container figure {
@@ -64,4 +70,23 @@ header img {
 .container h5 {
   font-size: 145%;
   margin: 0 0 10px 0;
+}
+
+.container img {
+  height: 120%;
+}
+
+.abilities {
+  display: flex;
+}
+
+.type-tag {
+  border-radius: 3px;
+  color: #fff;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  text-align: center;
+  padding: 2px 0;
+  font-size: 15px;
 }
