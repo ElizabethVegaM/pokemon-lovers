@@ -11,9 +11,9 @@ const orderBtn = document.querySelector('#order');
 
 
 const drawExtendedCard = (pokemon) => {
-  const container = document.createElement('article');
+  const card = document.createElement('article');
 
-  container.innerHTML = `<article>
+  card.innerHTML = `<article>
     <h2>${pokemon.name}</h2>
     <span>#${pokemon.num}</span>
     <section>
@@ -37,7 +37,14 @@ const drawExtendedCard = (pokemon) => {
     <button>Explore More Pokémon</button>
   </article>`
 
-  return container;
+  card.querySelector('button').addEventListener('click', () => {
+    container.innerHTML = '';
+    pokeArr.map((data) => {
+      container.appendChild(drawCard(data));
+    });
+  })
+
+  return card;
 };
 
 const drawCard = (pokemon) => {
@@ -75,13 +82,6 @@ window.addEventListener("load", () => {
   filters.map(type => filterBtn.innerHTML += `<option value=${type}>${type}</option>`);
 });
 
-
-filterBtn.addEventListener('change', (e) => {
-  console.log(e.target.value);
-  const newData = filterData(pokeArr, e.target.value);
-  container.innerHTML = '';
-  newData.map(pokemon => container.appendChild(drawCard(pokemon)));
-})
 
 filterBtn.addEventListener('change', (e) => {
   const newData = filterData(pokeArr, e.target.value);

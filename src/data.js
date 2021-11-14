@@ -6,6 +6,7 @@ export const reduceData = (data) => {
 };
 
 export const filterData = (data, condition) => {
+  if (condition === 'all') return data;
   return data.filter(element => element.type.includes(condition));
 }
 
