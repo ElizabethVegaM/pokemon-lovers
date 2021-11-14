@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Share:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;500&display=swap');
 
 body {
   background: #0c1c3e url(./img/container_bg.png);
+  color: #212121;
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
@@ -12,8 +13,12 @@ header {
   background: #fff url(./img/purple-background.jpg);
   color: #fff;
   display: flex;
-  height: 15vh;
+  height: 20vh;
+  position: fixed;
   text-shadow: 1px 1px 2px rgb(0 0 0 / 40%);
+  top: 0;
+  width: 100vw;
+  z-index: 3;
 }
 
 header img {
@@ -24,6 +29,7 @@ header img {
 .navbar {
   background: #fff url(./img/container_bg.png);
   display: flex;
+  height: 5vh;
 }
 
 .container {
@@ -32,14 +38,16 @@ header img {
   margin: auto;
   min-height: 100vh;
   width: 80%;
+  margin-top: 0;
 }
 
 .container ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  padding-top: 20vh;
   text-transform: capitalize;
-  font-family: 'Share', cursive;
+  font-family: 'Exo', sans-serif;
 }
 
 .container li {
@@ -53,7 +61,16 @@ header img {
   transform: translateY(-10px);
 }
 
-.container figure {
+/* Small Card */
+
+.extended-card {
+  background-color: #fbfbfb;
+  margin: auto;
+  padding: 0 20px;
+  width: 80%;
+}
+
+.basic-card figure {
   background: #F2F2F2;
   border-radius: 5px;
   margin: 0;
@@ -62,17 +79,18 @@ header img {
   width: 100%;
 }
 
-.container p {
+.basic-card p {
   color: #919191;
   margin: 2px 0;
 }
 
-.container h5 {
+.basic-card h5 {
   font-size: 145%;
   margin: 0 0 10px 0;
+  font-weight: 400;
 }
 
-.container img {
+.basic-card img {
   height: 120%;
 }
 
@@ -89,4 +107,65 @@ header img {
   text-align: center;
   padding: 2px 0;
   font-size: 15px;
+}
+
+/* Extended Card */
+
+.card-title {
+  text-align: center;
+}
+
+.card-title h2 {
+  font-size: 200%;
+  font-weight: 400;
+}
+
+.card-title span {
+  color: #616161;
+}
+
+.card-body {
+  display: flex;
+}
+
+.card-body figure {
+  background-color: #F2F2F2;
+  border-radius: 5px;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.card-body img {
+  height: 100%;
+}
+
+.card-about {
+  font-size: 110%;
+  margin-top: 0;
+  text-transform: none;
+  text-align: justify;
+}
+
+.card-info {
+  margin-left: 20px;
+}
+
+.details {
+  background-color: #30a7d7;
+  border-radius: 10px;
+  color: #fff;
+  padding: 15px;
+}
+
+.details p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+  font-size: 95%;
+}
+
+.details p span:nth-child(2) {
+  color: #212121;
 }
