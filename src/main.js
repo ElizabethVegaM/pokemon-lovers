@@ -1,9 +1,14 @@
-import { example } from "./data.js";
+import { reduceData, filterData, sortData } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 
 const pokeArr = data.pokemon;
-console.log(example, data);
+let filters = [];
+console.log(data);
+
 const container = document.querySelector("#cardContainer");
+const filterBtn = document.querySelector('#filter');
+const orderBtn = document.querySelector('#order');
+
 
 const drawExtendedCard = (pokemon) => {
   const container = document.createElement('article');
@@ -32,7 +37,7 @@ const drawExtendedCard = (pokemon) => {
     <button>Explore More Pokémon</button>
   </article>`
 
-return container;
+  return container;
 };
 
 const drawCard = (pokemon) => {
@@ -54,7 +59,6 @@ const drawCard = (pokemon) => {
   </div>`;
 
   card.addEventListener("click", () => {
-    console.log(pokemon);
     container.innerHTML = '';
     container.appendChild(drawExtendedCard(pokemon));
   });
@@ -62,10 +66,34 @@ const drawCard = (pokemon) => {
   return card;
 };
 
-
-
 window.addEventListener("load", () => {
   pokeArr.map((pokemon) => {
+    filters.push(pokemon.type);
     container.appendChild(drawCard(pokemon));
   });
+  filters = reduceData(filters.flat());
+  filters.map(type => filterBtn.innerHTML += `<option value=${type}>${type}</option>`);
 });
+
+
+filterBtn.addEventListener('change', (e) => {
+  console.log(e.target.value);
+  const newData = filterData(pokeArr, e.target.value);
+  container.innerHTML = '';
+  newData.map(pokemon => container.appendChild(drawCard(pokemon)));
+})
+
+filterBtn.addEventListener('change', (e) => {
+  const newData = filterData(pokeArr, e.target.value);
+  container.innerHTML = '';
+  newData.map(pokemon => container.appendChild(drawCard(pokemon)));
+})
+
+orderBtn.addEventListener('change', (e) => {
+  let sortBy = e.target.value;
+  const newData = ['low', 'high'].includes(sortBy) ? sortData(pokeArr, 'num', sortBy) : sortData(pokeArr, 'name', sortBy);
+  container.innerHTML = '';
+  newData.map(pokemon => container.appendChild(drawCard(pokemon)));
+})
+
+
