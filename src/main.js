@@ -3,7 +3,6 @@ import data from "./data/pokemon/pokemon.js";
 
 const pokeArr = data.pokemon;
 let filters = [];
-console.log(data);
 
 const container = document.querySelector("#cardContainer");
 const filterBtn = document.querySelector("#filter");
@@ -77,7 +76,7 @@ const drawCard = (pokemon) => {
     <h5>${pokemon.name}</h5>
     <div class="abilities">
       ${pokemon.type.map(
-        (type) => `<span class="type-tag ${type}-tag">${type}<span>`
+        (element) => `<span class="type-tag ${element}-tag">${element}<span>`
       )}
     </div>
   </section>`;
